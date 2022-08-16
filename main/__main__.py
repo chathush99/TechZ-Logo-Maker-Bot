@@ -5,7 +5,7 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, CallbackQuery
 from main.logo import generate_logo
 
-START = """
+LSTART = """
 **🔮 Hello There, You Can Use Me To Create Awesome Logos...**
 
 ➤ Click /help Or The Button Below To Know How To Use Me
@@ -23,13 +23,13 @@ HELP = """
 """
 
 # Commands
-@app.on_message(filters.command("start"))
+@app.on_message(filters.command("lstart"))
 async def start(bot, message):
-  await message.reply_photo("https://telegra.ph/file/7a98ead33e7b99fd82cc7.jpg",caption=START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu"), InlineKeyboardButton(text="Repo", url="https://github.com/TechShreyash/TechZ-Logo-Maker-Bot")]]))
+  await message.reply_photo("https://telegra.ph//file/22207a5f3ee86c0e774ae.jpg",caption=START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu"), InlineKeyboardButton(text="Repo", url="https://github.com/TechShreyash/TechZ-Logo-Maker-Bot")]]))
 
 @app.on_message(filters.command("help"))
 async def help(bot, message):
-  await message.reply_photo("https://telegra.ph/file/7a98ead33e7b99fd82cc7.jpg",caption=HELP,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Back", callback_data="start_menu")]]))
+  await message.reply_photo("https://telegra.ph//file/22207a5f3ee86c0e774ae.jpg",caption=HELP,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Back", callback_data="start_menu")]]))
 
 @app.on_message(filters.command("logo") & filters.incoming & filters.text & ~filters.forwarded & (
   filters.group | filters.private))
