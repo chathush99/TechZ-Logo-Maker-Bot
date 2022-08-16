@@ -25,7 +25,7 @@ HELP = """
 # Commands
 @app.on_message(filters.command("lstart"))
 async def start(bot, message):
-  await message.reply_photo("https://telegra.ph//file/22207a5f3ee86c0e774ae.jpg",caption=START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu"), InlineKeyboardButton(text="Repo", url="https://github.com/TechShreyash/TechZ-Logo-Maker-Bot")]]))
+  await message.reply_photo("https://telegra.ph//file/22207a5f3ee86c0e774ae.jpg",caption=START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu"), InlineKeyboardButton(text="Repo", url="https://github.com/IMchathush")]]))
 
 @app.on_message(filters.command("help"))
 async def help(bot, message):
